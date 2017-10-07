@@ -7,7 +7,7 @@ All MySmartHands apps are in this same repository along with common/thirdparty l
 
 Modules:
 --------
-1. common_lib: This is common library used across all apps. This include thirdparty libraries needed to support functionalities.
+1. unmano_library: This is thirdparty library used across all apps for sliding/layout functionality.
 
 2. common_lib: This is common library used across all apps. This include thirdparty libraries needed to support functionalities.
 
