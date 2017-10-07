@@ -26,7 +26,7 @@ dependencies {
     //compile project(':zip_lib')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
-    //compile project(':umano_library')
+    compile project(':umano_library')
     //compile 'com.google.android.gms:play-services:8.4.+'
     //compile files('libs/in-app-purchasing-1.0.3.jar')
     //compile files('libs/google-play-services.jar')
