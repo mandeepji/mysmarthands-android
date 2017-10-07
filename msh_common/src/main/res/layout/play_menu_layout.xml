@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/root"
+    android:background="@drawable/main_background"
+    android:orientation="vertical" >
+
+    <com.msh.common.android.dictionary.view.TitleBarView
+        android:id="@+id/titleBarView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="12" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="90"
+        android:orientation="vertical" >
+
+<!--  
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quizType"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+-->
+        <ListView
+            android:id="@+id/listView3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+</LinearLayout>

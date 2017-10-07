@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/quizParent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical" >
+
+    <com.msh.common.android.dictionary.view.TitleBarView
+        android:id="@+id/titleBarView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="25" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <VideoView
+            android:id="@+id/quizVideoView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/redo"
+            android:id="@+id/replay" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="90" >
+
+        <ListView
+            android:id="@+id/quizListView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+        </ListView>
+    </RelativeLayout>
+
+</LinearLayout>

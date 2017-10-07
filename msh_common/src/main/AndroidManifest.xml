@@ -1,0 +1,116 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.msh.common.android.dictionary">
+
+    <!-- Required to access Android Market Licensing -->
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+    <!-- Required to download files from Android Market -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Required to keep CPU alive while downloading files (NOT to keep screen awake) -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Required to poll the state of the network connection and respond to changes -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Required to check whether Wi-Fi is enabled -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Required to read and write the expansion files on shared storage -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--<uses-permission android:name="com.android.vending.BILLING" />-->
+
+    <application
+        android:name=".AppInstance"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name">
+
+        <!-- Play Services -->
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <!-- admob -->
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+
+        <!-- com.msh.common.android.dictionary.xapk.ExpansionDownloadActivity -->
+        <activity
+            android:name=".xapk.ExpansionDownloadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+         In order to start the service, it must be uniquely registered with
+         the package manager here.
+        -->
+        <service android:name=".xapk.ExpansionDownloadService" />
+
+        <!--
+         In order for the alarm manager to contact the downloader script, the receiver
+         must be uniquely registered with the package manager here.
+        -->
+        <receiver android:name="com.common_lib.android.apkexpansion.APKAlarmReceiver" />
+
+        <!-- Amazon iap -->
+        <receiver android:name = "com.amazon.inapp.purchasing.ResponseReceiver" >
+            <intent-filter>
+                <action android:name = "com.amazon.inapp.purchasing.NOTIFY"
+                    android:permission = "com.amazon.inapp.purchasing.Permission.NOTIFY" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".view.LearnActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".view.QuizMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".view.QuizActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".view.PlayMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".view.PlayActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".view.ResultsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".view.KeyboardActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".view.VideoPlayerActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".view.SongsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+
+        <!-- Testing Activities-->
+        <activity
+            android:name=".test.VideoTestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+
+    </application>
+<!--
+Issues:
+   Status  Device             OS          Issue
+1. Open    Nexus 5, Moto G2   5.1, 5.0    Video overlaps by list.
+2. Open    Galaxy TabS 8.4    4.4         Quiz Crashes
+
+
+-->
+</manifest>

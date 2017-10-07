@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.msh.common.android.dictionary.view.SearchLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchLL"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_background"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <com.msh.common.android.dictionary.view.TitleBarView
+        android:id="@+id/titleBarView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="12" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="76" >
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/upBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/videoView"
+            android:layout_marginBottom="1dip"
+            android:background="#66778899"
+            android:minHeight="40dip"
+            android:minWidth="60dip"
+            android:text="@string/upBtn" />
+
+        <TextView
+            android:id="@+id/emptyText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/emptyTable"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/DarkOrange" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="12" >
+
+        <com.msh.common.android.dictionary.view.ToolBarView
+            android:id="@+id/toolBarView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <EditText
+            android:id="@+id/editTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:inputType="text" />
+    </RelativeLayout>
+
+</com.msh.common.android.dictionary.view.SearchLayout>

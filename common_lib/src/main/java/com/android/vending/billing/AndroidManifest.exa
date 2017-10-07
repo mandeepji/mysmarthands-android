@@ -1,0 +1,4 @@
+
+
+ <!-- Permissions -->
+ <uses-permission android:name="com.android.vending.BILLING" />

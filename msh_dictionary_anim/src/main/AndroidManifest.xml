@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rbi.msh_dictionary_anim">
+
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <application>
+        <provider
+            android:name="com.msh.common.android.dictionary.xapk.ExpansionFileProvider"
+            android:authorities="com.msh.android.dictionary_anim.ExpansionFileProvider"
+            android:exported="false" >
+            <meta-data
+                android:name="mainVersion"
+                android:value="4" />
+
+        </provider>
+    </application>
+
+</manifest>

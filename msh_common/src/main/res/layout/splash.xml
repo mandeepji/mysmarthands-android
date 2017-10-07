@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchLL"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/boot_screen"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dip"
+        android:background="@android:drawable/alert_light_frame"
+        android:gravity="center_horizontal"
+        android:text="@string/loading"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/DarkOrange" />
+
+    <Button
+        android:id="@+id/fullBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_above="@+id/buttons"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/bar_button"
+        android:contentDescription=""
+        android:text="@string/fullVersion"
+        android:textSize="20dip"
+        android:textColor="@android:color/white" />
+    
+    <ProgressBar 
+        android:id="@+id/pBar"
+        android:layout_width="300dip"
+        android:layout_height="50dip"
+        android:layout_above="@+id/infoText"
+        android:layout_centerHorizontal="true"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        />
+        
+    <TextView
+       android:id="@+id/pBarText"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignBottom="@+id/pBar"
+       android:layout_centerHorizontal="true"
+       />
+    
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="80dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dip"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/bar_button"
+            android:contentDescription=""
+
+            android:src="@drawable/asl_text"
+            android:textColor="@android:color/white" />
+
+        <ImageButton
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/bar_button"
+            android:contentDescription=""
+ 
+            android:src="@drawable/baby_text"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

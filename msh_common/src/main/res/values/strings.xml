@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- APP -->
+    <string name="app_name">Baby Signing ASL</string>
+    
+    <!-- LEARN ACTIVITY -->
+    <string name="titleBarDefault">My Smart Hands</string>
+    <string name="quizBtnTxt">Quiz</string>
+    <string name="goToBtnTxt">Go To</string>
+    <string name="upBtn">^^^</string>
+    <string name="desc"> </string>
+    
+    <!-- QUIZ MENU ACTVITY -->
+    <string name="qNumTitle">Number Of Questions</string>
+    <string name="aNumTitle">Number of Answers</string>
+    <string name="qMenuPlayTitle">Play</string>
+    <string name="quizType">Category</string>
+    <string name="quizSetKEY">ans_key</string>
+    
+    <string-array name="answers_array">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    
+    <string-array name="question_array">
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+    </string-array>
+    
+    <color name="DarkOrange">#ffff8c00</color>
+    <string name="tapOnVideoName">Tap on Video to Play</string>
+    <string name="emptyTable">No Words Found</string>
+    <string name="serviceCheck">check</string>
+    <string name="loading">Loading...</string>
+    <string name="urlKEY">urlKey</string>
+    <string name="wifiWarning">It has been detected that you are not connected to a wifi connection. The content to be downloaded is approximately &lt;SIZE&gt; MB. Press “Close” to close the app and restart it once you have enabled your Wi-Fi connection.\n\nAlternatively, press “Start” to begin downloading the content on the current connection. </string>
+    <string name="updateWarning">Updates to the content are now available!\n\nDo you want to download now?</string>
+    <string name="downloadMsg">Downloading content in the background: This may take several minutes.</string>
+    <string name="incompleteWarning">Some of the content failed to download.\n\nRetry now?</string>
+    <string name="serviceErrKey">errKey</string>
+    <string name="resHeight">resH</string>
+    <string name="fullVersion">Get Full Version</string>
+    <string name="noNetwork">No Network Connection Found.\n\nThis is required to download content before you can use the app. Please connect your device and restart My Smart Hands.</string>
+    <string name="downloadWarning">You are about to download the content for this app. Download size is approximately &lt;SIZE&gt; MB and therefore use of a wifi connection is recomended. \n\n Please select the storage you would like to use:</string>
+    <string name="insufficientSpace">No disk with sufficient available space found. Please make room for the &lt;SIZE&gt; MB content (required) on the drive you wish to store it. </string>
+    <string name="storageKey">storageKey</string>
+    <string name="seperateQuizKey">seperateQuizKey</string>
+    
+    <string name="qwertyString">QWERTYUIOPASDFGHJKLZXCVBNM</string>
+    
+</resources>

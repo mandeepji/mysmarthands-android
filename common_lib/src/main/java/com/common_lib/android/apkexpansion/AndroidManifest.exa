@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+    
+    <!-- Only devices >= 3 have a version of Android Market that supports licensing. -->
+    <uses-sdk android:minSdkVersion="5" android:targetSdkVersion="18" />
+
+    <!-- Required to access Android Market Licensing -->
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+    <!-- Required to download files from Android Market -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Required to keep CPU alive while downloading files (NOT to keep screen awake) -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Required to poll the state of the network connection and respond to changes -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Required to check whether Wi-Fi is enabled -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- Required to read and write the expansion files on shared storage -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        
+
+		<!-- Downloader  implementation -->
+		<activity android:name="YourSubclassofAPKDownloadActivity" />
+
+        <!--
+         In order to start the service, it must be uniquely registered with
+         the package manager here. 
+        -->
+        <service android:name="YourSubclassofAPKDownloadService" />
+
+        <!--
+         In order for the alarm manager to contact the downloader script, the receiver
+         must be uniquely registered with the package manager here. 
+        -->
+        <receiver android:name="com.rbi.android.apkexpansion.APKAlarmReceiver" />
+
+		<!-- If you need access to files by URI then subclass the APEZPRovider. 
+			Use XAPKHelper.getURIFile(String authority,String fileName,String fileExtension).
+			best to use a Constant for the authority definition as the string must match
+			in the provider def below, calls to the XAPHelper, and the sublclassed provider
+		-->
+		
+		<!-- If you need access to files by URI then use this provider -->
+        <provider
+            android:name="The String you return in get Authority from YourSubclassofAPEZProvider"
+            android:authorities="YourSubclassofAPEZProvider"
+            android:exported="false" >
+            <meta-data
+                android:name="mainVersion"
+                android:value="1" />
+                
+            <meta-data
+                android:name="patchVersion"
+                android:value="1" />    
+        </provider> <!-- CHANGE "authorities" PER VERSION and match meta-data to version of xapk uploaded -->
+		
+
+    </application>
+
+</manifest>

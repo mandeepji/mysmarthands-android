@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rbi.msh_dictionary_v2">
+
+    <application>
+        <!-- If you need access to files by URI then use this provider -->
+        <provider
+            android:name="com.msh.common.android.dictionary.xapk.ExpansionFileProvider"
+            android:authorities="com.msh.android.dictionary_v2.ExpansionFileProvider"
+            android:exported="false">
+            <meta-data
+                android:name="mainVersion"
+                android:value="18" />
+        </provider>
+
+    </application>
+
+</manifest>
